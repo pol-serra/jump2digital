@@ -17,13 +17,15 @@ El conjunto de datos consta de dos fuentes principales:
 
 Antes de realizar el análisis, se realizaron las siguientes tareas de preprocesamiento de datos:
 
-1. Se fusionaron los datos de alquiler y niveles de ruido en función de los distritos y barrios correspondientes.
+1. Se fusionaron los datos de alquiler y niveles de ruido en función de los distritos y barrios correspondientes. Además se analizo que no hubiera valores tipo 'nan' o nulos.
 
 2. Se calculo la media de los precios de alquiler medio y por m2 de los 4 trimestres disponibles, decidi no usar filtro de mediana ya que analizando los datos visualmente no aparecían valores altos o desorbitados erroneos.
 
-3. Se eliminaron columnas innecesarias como 'Codi_Districte' y 'Codi_Barri'. 
+3. Se eliminaron columnas innecesarias como 'Codi_Districte' y 'Codi_Barri'. Información duplicada con los nombres.
 
 4. Se transformó la columna 'Valor' en un valor numérico después de eliminar el símbolo '%' y se mapearon los rangos de ruido a valores numéricos calculando luego la media de dB Promedio.
+
+5. Para aplicar PCA, previamente se ha aplicado una normalización i estandarización a los valores numéricos. A valores categoricosl como el "Concepte" ruido se les ha aplicado un One-Hot-Encode.
 
 ## Resultados
 
