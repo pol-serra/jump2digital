@@ -19,18 +19,20 @@ Antes de realizar el análisis, se realizaron las siguientes tareas de preproces
 
 1. Se fusionaron los datos de alquiler y niveles de ruido en función de los distritos y barrios correspondientes.
 
-2. Se eliminaron columnas innecesarias como 'Codi_Districte' y 'Codi_Barri'.
+2. Se calculo la media de los precios de alquiler medio y por m2 de los 4 trimestres disponibles, decidi no usar filtro de mediana ya que analizando los datos visualmente no aparecían valores altos o desorbitados erroneos.
 
-3. Se transformó la columna 'Valor' en un valor numérico después de eliminar el símbolo '%' y se mapearon los rangos de ruido a valores numéricos.
+3. Se eliminaron columnas innecesarias como 'Codi_Districte' y 'Codi_Barri'. 
+
+4. Se transformó la columna 'Valor' en un valor numérico después de eliminar el símbolo '%' y se mapearon los rangos de ruido a valores numéricos calculando luego la media de dB Promedio.
 
 ## Resultados
 
-El análisis de datos reveló una relación entre los precios de alquiler y los niveles de ruido en diferentes distritos y barrios de Barcelona. Se realizaron análisis estadísticos y visualizaciones para comprender mejor esta relación.
+<!-- El análisis de datos reveló una relación entre los precios de alquiler y los niveles de ruido en diferentes distritos y barrios de Barcelona. Se realizaron análisis estadísticos y visualizaciones para comprender mejor esta relación. -->
 
-Se utilizó el análisis de componentes principales (PCA) para reducir la dimensionalidad de los datos y visualizar la distribución de los distritos y barrios en un espacio de dos componentes principales. Se creó un gráfico de dispersión que muestra la ubicación de los distritos y barrios en función de los dos primeros componentes principales. Al hacer clic en un punto en el gráfico, se muestra información detallada sobre el distrito y el barrio correspondientes.
+Se utilizó el análisis de componentes principales (PCA) para reducir la dimensionalidad de los datos y visualizar la distribución de los distritos y barrios en un espacio de dos componentes principales. Se creó un gráfico de dispersión que muestra la ubicación de los distritos y barrios en función de los dos primeros componentes principales. Al hacer clic en un punto en el gráfico, se muestra información detallada sobre el distrito y el barrio correspondientes. Podemos observar como el primer componentes refleja el precio del barrio fusión entre el valor mensual y por m2. Mientras qeu el segundo componente el nivel de ruido de menor a mayor. Perdemos bastante relevancia en la información del tipo de ruido. 
 
 ## Conclusiones
 
-El análisis de datos muestra una relación interesante entre los precios de alquiler y los niveles de ruido en Barcelona. Los resultados sugieren que ciertos distritos y barrios pueden tener una correlación entre el precio de alquiler y los niveles de ruido. Estos hallazgos pueden ser útiles para tomar decisiones relacionadas con la elección de la ubicación de una vivienda en la ciudad.
+El análisis de datos muestra una relación interesante entre los precios de alquiler y los niveles de ruido en Barcelona. Los resultados sugieren que ciertos distritos y barrios pueden tener una correlación entre el precio de alquiler y los niveles de ruido. Hecho el cual se refleja en la existencia en la ultima grafica donde hay niveles superiores para barrios con un valor más assequible de alquiler.
 
 Este informe proporciona una visión general del análisis de datos realizado y puede ser utilizado como punto de partida para análisis y exploraciones más profundas.
